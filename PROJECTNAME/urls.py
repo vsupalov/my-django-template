@@ -16,6 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# As described here https://vsupalov.com/most-simple-url-based-view-in-django/
+from django.views.generic.base import TemplateView
+
+# OR do this
+#from APPNAME.views import StartView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name="base.html"), name="start"),
+    #path('', StartView, name="start")
 ]
