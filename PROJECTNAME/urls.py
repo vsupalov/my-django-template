@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 
 # As described here https://vsupalov.com/most-simple-url-based-view-in-django/
 from django.views.generic.base import TemplateView
@@ -27,3 +28,9 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name="base.html"), name="start"),
     #path('', StartView, name="start")
 ]
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+    ] + urlpatterns

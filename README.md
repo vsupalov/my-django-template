@@ -19,6 +19,7 @@ If you want to start small and might add this stuff later eventually? You're goo
 * Roughly followed https://vsupalov.com/quick-django-refresher-crash-course/
 * https://github.com/joke2k/django-environ
 * http://whitenoise.evans.io/en/stable/ and https://docs.djangoproject.com/en/3.0/howto/static-files/
+* https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
 
 ## Next Steps
 
@@ -43,11 +44,12 @@ Run rename.sh in a terminal, afterwards you can remove that file.
 ## TODOs
 
 [x] env.dist and https://github.com/joke2k/django-environ
-[ ] Whitenoise and static file handling
-[ ] Black and/or pylint
-[ ] Editor configs?
-[ ] Adjust settings to be DEBUG-sensitive
+[x] Whitenoise and static file handling
 [ ] Development goodies from https://vsupalov.com/favorite-django-packages-2019/
+[ ] Adjust settings to be DEBUG-sensitive
+[ ] Black and/or pylint and editor configs?
 [ ] docker-compose for backing services
-[ ] describe how to use those dependencie
+[ ] describe how to use those dependencies?
+[ ] Sentry
 [ ] Procfile to deploy to Heroku
+[ ] Testing?
