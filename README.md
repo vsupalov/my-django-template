@@ -23,3 +23,14 @@ egrep -lRZ 'APPNAME' . | xargs -0 -l sed -i -e "s/foo/$NEW_APP_NAME/g"
 mv PROJECTNAME $NEW_PROJECT_NAME
 mv APPNAME $NEW_APP_NAME
 ```
+
+## TODOs
+
+* env.dist and https://github.com/joke2k/django-environ
+* Adjust settings to be DEBUG-sensitive
+* Black and/or pylint
+* Editor configs?
+* Whitenoise and static file handling
+* Procfile to deploy to Heroku
+* Development goodies from https://vsupalov.com/favorite-django-packages-2019/
+* docker-compose for backing services
