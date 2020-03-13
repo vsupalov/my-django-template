@@ -9,28 +9,31 @@ Starting with a blank project, let's see if I can setup a nice Django environmen
 ## Next Steps
 
 * Rename the PROJECTNAME and rename the APPNAME (see section below)
+* Run `pipenv install`
+* Copy env.dist to `.env`, make adjustements as needed
 * Afterwards, make migrations, apply them, create a superuser and run a development server as described here https://vsupalov.com/quick-django-refresher-crash-course/#migrations
+
+```
+pipenv shell
+python manage.py makemigrations users
+python manage.py migrate
+#python manage.py createsuperuser # or instead
+echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('root', 'root@example.com', 'rootroot')" | python manage.py shell
+python manage.py runserver
+```
 
 ## Customize the Project Naming
 
-Run the following in a terminal
-
-```
-export NEW_PROJECT_NAME=myproject
-export NEW_APP_NAME=myapp
-egrep -lRZ 'PROJECTNAME' . | xargs -0 -l sed -i -e "s/foo/$NEW_PROJECT_NAME/g"
-egrep -lRZ 'APPNAME' . | xargs -0 -l sed -i -e "s/foo/$NEW_APP_NAME/g"
-mv PROJECTNAME $NEW_PROJECT_NAME
-mv APPNAME $NEW_APP_NAME
-```
+Run rename.sh in a terminal, afterwards you can remove that file.
 
 ## TODOs
 
-* env.dist and https://github.com/joke2k/django-environ
-* Adjust settings to be DEBUG-sensitive
-* Black and/or pylint
-* Editor configs?
-* Whitenoise and static file handling
-* Procfile to deploy to Heroku
-* Development goodies from https://vsupalov.com/favorite-django-packages-2019/
-* docker-compose for backing services
+[x] env.dist and https://github.com/joke2k/django-environ
+[ ] Whitenoise and static file handling
+[ ] Black and/or pylint
+[ ] Editor configs?
+[ ] Adjust settings to be DEBUG-sensitive
+[ ] Development goodies from https://vsupalov.com/favorite-django-packages-2019/
+[ ] docker-compose for backing services
+[ ] describe how to use those dependencie
+[ ] Procfile to deploy to Heroku
