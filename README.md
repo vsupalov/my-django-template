@@ -2,9 +2,23 @@
 
 Starting with a blank project, let's see if I can setup a nice Django environment which does not feel too heavy.
 
-## Steps
+## You Might Want to Reconsider If
 
-* Roughly follow https://vsupalov.com/quick-django-refresher-crash-course/
+Do you need a more elaborate setups with
+
+* allauth
+* DRF
+* celery
+
+out of the box? Check out https://github.com/pydanny/cookiecutter-django/ instead.
+
+If you want to start small and might add this stuff later eventually? You're good to go.
+
+## How this was created
+
+* Roughly followed https://vsupalov.com/quick-django-refresher-crash-course/
+* https://github.com/joke2k/django-environ
+* http://whitenoise.evans.io/en/stable/ and https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 ## Next Steps
 
