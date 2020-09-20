@@ -24,7 +24,7 @@ If you want to start small and might add this stuff later eventually? You're goo
 ## Next Steps
 
 * Rename the PROJECTNAME and rename the APPNAME (see section below)
-* Run `pipenv install`
+* Run `pipenv install --dev`
 * Copy env.dist to `.env`, make adjustements as needed
 * Afterwards, make migrations, apply them, create a superuser and run a development server as described here https://vsupalov.com/quick-django-refresher-crash-course/#migrations
 
@@ -41,15 +41,14 @@ python manage.py runserver
 
 Run rename.sh in a terminal, afterwards you can remove that file.
 
-## TODOs
+## Possible TODOs
 
-[x] env.dist and https://github.com/joke2k/django-environ
-[x] Whitenoise and static file handling
-[ ] Development goodies from https://vsupalov.com/favorite-django-packages-2019/
-[ ] Adjust settings to be DEBUG-sensitive
-[ ] Black and/or pylint and editor configs?
-[ ] docker-compose for backing services
-[ ] describe how to use those dependencies?
-[ ] Sentry
-[ ] Procfile to deploy to Heroku
-[ ] Testing?
+- [x] env.dist and https://github.com/joke2k/django-environ
+- [x] Whitenoise and static file handling
+- [x] Development goodies from https://vsupalov.com/favorite-django-packages-2019/ (only debug toolbar for now)
+- [x] Adjust settings to be DEBUG-sensitive
+- [ ] Black and/or pylint and editor configs?
+- [ ] docker-compose for backing services and describe how to use those dependencies?
+- [ ] Sentry
+- [ ] Procfile to deploy to Heroku
+- [ ] Testing basics
